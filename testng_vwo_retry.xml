@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/ashut/IdeaProjects/ATB12xSeleniumAdvanceFramework/src/test/java/org/example/tests/pageObjectModel_Test/vwo/TestVWOLogin_03_Retry.java">
-        <classes/>
+    <!--    <test verbose="2" preserve-order="true" parallel="methods" thread-count="2" name="ATB12xSeleniumAdvanceFramework">-->
+    <listeners>
+        <listener class-name="org.example.listeners.RetryListener"></listener>
+        <listener class-name="org.example.listeners.ScreenshotListener"></listener>
+
+    </listeners>
+
+    <test verbose="2" preserve-order="true"  name="ATB12xSeleniumAdvanceFramework">
+        <classes>
+            <class name="org.example.tests.pageObjectModel_Test.vwo.TestVWOLogin_03_Retry">
+            </class>
+        </classes>
     </test>
 </suite>
